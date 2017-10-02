@@ -1,0 +1,16 @@
+{
+        "apps": [{
+                "name": "arise.app",
+                "script": "app.js",
+                "cwd": ".",
+                "pid_file": "./pids/arise.app.pid",
+                "out_file": "./logs/arise.app.log",
+                "error_file": "./logs/arise.app.err",
+                "log_date_format": "YYYY-MM-DD HH:mm:ss SSS",
+                "watch": false,
+                "kill_timeout" : 10000,
+                "max_memory_restart": "1024M",
+                "node_args": "--max_old_space_size=1024",
+                "args": "-c config.json"
+        }]
+}

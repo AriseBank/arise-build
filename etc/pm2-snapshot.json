@@ -1,0 +1,17 @@
+{
+        "apps": [{
+                "name": "arise.snapshot",
+                "script": "app.js",
+                "cwd": ".",
+                "pid_file": "./pids/arise.snapshot.pid",
+                "out_file": "./logs/arise.snapshot.log",
+                "error_file": "./logs/arise.snapshot.err",
+                "log_date_format": "YYYY-MM-DD HH:mm:ss SSS",
+                "autorestart": false,
+                "watch": false,
+                "kill_timeout" : 10000,
+                "max_memory_restart": "2048M",
+                "node_args": "--max_old_space_size=2048",
+                "args": "-c etc/snapshot.json -s highest"
+        }]
+}
